@@ -1,0 +1,926 @@
+/*css初始化*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    font-family: Georgia, serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: #616e7c;
+    width: 100% !important;
+    height: 100% !important;
+    background: #FFF;
+    font-family: 'Open Sans', sans-serif;
+}
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+select, input {
+    vertical-align: middle;
+}
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+select, input, textarea {
+    font-size: 14px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.mask{
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    z-index:100;
+    display: none;
+}
+.mask-con{
+    margin:200px auto;
+    width:720px;
+    height:60px;
+}
+.mask-con p{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.mask-btn .yes,.mask-btn .no{
+    width:150px;
+    height: 40px;
+    font-size: 22px;
+}
+.mask-btn .yes a{
+    display: block;
+    width:150px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: -7px;
+    margin-left: -13px;
+    line-height: 40px;
+    text-decoration: none;
+}
+.mask-btn{
+    margin: 0 auto;
+    width: 320px;
+    height: 40px;
+}
+@media (max-width: 768px) {
+    .mask-con{
+        width:400px;
+    }
+}
+/*导航条*/
+#nav-container{
+    z-index: 10;
+    width: 100%;
+    background:#ccc;
+    opacity:0;
+}
+#nav-container.fix-top{
+    width: 100%;
+    position: fixed;
+    top:0;
+}
+.nav-textcontainer{
+    width:80%;
+}
+.mynav {
+    position: relative;
+    min-height:30px;
+}
+.mynav .nav-brand{
+    font-size:42px;
+}
+@media (min-width: 768px) {
+    .mynav {
+        border-radius: 4px;
+    }
+}
+@media (min-width: 768px) {
+    .mynav-header {
+        float: left;
+    }
+}
+.mynav-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.mynav-collapse.in {
+    overflow-y: auto;
+}
+@media (min-width: 768px) {
+    .mynav-collapse {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .mynav-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+    .mynav-collapse.in {
+        overflow-y: visible;
+    }
+    .mynav-fixed-top .mynav-collapse,
+    .mynav-static-top .mynav-collapse,
+    .mynav-fixed-bottom .mynav-collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.mynav-fixed-top .mynav-collapse,
+.mynav-fixed-bottom .mynav-collapse {
+    max-height: 340px;
+}
+@media (max-device-width: 480px) and (orientation: landscape) {
+    .mynav-fixed-top .mynav-collapse,
+    .mynav-fixed-bottom .mynav-collapse {
+        max-height: 200px;
+    }
+}
+.container > .mynav-header,
+.container-fluid > .mynav-header,
+.container > .mynav-collapse,
+.container-fluid > .mynav-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 768px) {
+    .container > .mynav-header,
+    .container-fluid > .mynav-header,
+    .container > .mynav-collapse,
+    .container-fluid > .mynav-collapse {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.mynav-static-top {
+    z-index: 1000;
+    border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+    .mynav-static-top {
+        border-radius: 0;
+    }
+}
+.mynav-fixed-top,
+.mynav-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+@media (min-width: 768px) {
+    .mynav-fixed-top,
+    .mynav-fixed-bottom {
+        border-radius: 0;
+    }
+}
+.mynav-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+.mynav-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+}
+.mynav-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height:30px;
+}
+.mynav-brand:hover,
+.mynav-brand:focus {
+    text-decoration: none;
+}
+.mynav-brand > img {
+    display: block;
+}
+@media (min-width: 768px) {
+    .mynav > .container .mynav-brand,
+    .mynav > .container-fluid .mynav-brand {
+        margin-left: -15px;
+        line-height:30px;
+    }
+}
+.mynav-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top:11px;
+    /*margin-right: 15px;*/
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+@media (max-width:767px) {
+    .mynav-toggle{
+        margin-right: -50px;
+    }
+    .nav-brand{
+        margin-left: -65px;
+    }
+}
+.mynav-toggle:focus {
+    outline: 0;
+}
+.mynav-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.mynav-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+@media (min-width: 768px) {
+    .mynav-toggle {
+        display: none;
+    }
+}
+.mynav-nav {
+    margin: 7.5px -15px;
+}
+.mynav-nav > li > a {
+    padding: 0 30px;
+    line-height:30px;
+    font-size: 16px;
+}
+@media (min-width: 768px) {
+    .mynav-nav {
+        float: left;
+        margin: 0;
+    }
+    .mynav-nav > li {
+        float: left;
+    }
+    .mynav-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+.mynav-btn {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.mynav-btn.btn-sm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mynav-btn.btn-xs {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.mynav-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+    .mynav-text {
+        float: left;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .mynav-left {
+        float: left !important;
+    }
+    .mynav-right {
+        float: right !important;
+        margin-right: -15px;
+    }
+    .mynav-right ~ .mynav-right {
+        margin-right: 0;
+    }
+}
+.mynav-default .mynav-brand {
+    color: #777;
+}
+.mynav-default .mynav-brand:hover,
+.mynav-default .mynav-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.mynav-default .mynav-text {
+    color: #777;
+}
+.mynav-default .mynav-nav > li > a {
+    color: #777;
+}
+.mynav-default .mynav-nav > li > a:hover,
+.mynav-default .mynav-nav > li > a:focus {
+    color:#7EE383;
+    background-color: transparent;
+}
+.mynav-default .mynav-nav > .active > a,
+.mynav-default .mynav-nav > .active > a:hover,
+.mynav-default .mynav-nav > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+.mynav-default .mynav-nav > .disabled > a,
+.mynav-default .mynav-nav > .disabled > a:hover,
+.mynav-default .mynav-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.mynav-default .mynav-toggle {
+    border-color:#ddd;
+}
+.mynav-default .mynav-toggle:hover,
+.mynav-default .mynav-toggle:focus {
+    background-color: #ddd;
+}
+.mynav-default .mynav-toggle .icon-bar {
+    background-color:#7EE383;
+}
+.mynav-default .mynav-collapse,
+.mynav-default .mynav-form {
+    border-color: #e7e7e7;
+}
+.mynav-default .mynav-nav > .open > a,
+.mynav-default .mynav-nav > .open > a:hover,
+.mynav-default .mynav-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+.mynav-default .mynav-link {
+    color: #777;
+}
+.mynav-default .mynav-link:hover {
+    color: #333;
+}
+.mynav-default .btn-link {
+    color: #777;
+}
+.mynav-default .btn-link:hover,
+.mynav-default .btn-link:focus {
+    color: #333;
+}
+.mynav-default .btn-link[disabled]:hover,
+fieldset[disabled] .mynav-default .btn-link:hover,
+.mynav-default .btn-link[disabled]:focus,
+fieldset[disabled] .mynav-default .btn-link:focus {
+    color: #ccc;
+}
+.mynav-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+.mynav-inverse .mynav-brand {
+    color: #9d9d9d;
+}
+.mynav-inverse .mynav-brand:hover,
+.mynav-inverse .mynav-brand:focus {
+    color: #fff;
+    background-color: transparent;
+}
+.mynav-inverse .mynav-text {
+    color: #9d9d9d;
+}
+.mynav-inverse .mynav-nav > li > a {
+    color: #9d9d9d;
+}
+.mynav-inverse .mynav-nav > li > a:hover,
+.mynav-inverse .mynav-nav > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+.mynav-inverse .mynav-nav > .active > a,
+.mynav-inverse .mynav-nav > .active > a:hover,
+.mynav-inverse .mynav-nav > .active > a:focus {
+    color: #fff;
+    background-color: #080808;
+}
+.mynav-inverse .mynav-nav > .disabled > a,
+.mynav-inverse .mynav-nav > .disabled > a:hover,
+.mynav-inverse .mynav-nav > .disabled > a:focus {
+    color: #444;
+    background-color: transparent;
+}
+.mynav-inverse .mynav-toggle {
+    border-color: #333;
+}
+.mynav-inverse .mynav-toggle:hover,
+.mynav-inverse .mynav-toggle:focus {
+    background-color: #333;
+}
+.mynav-inverse .mynav-toggle .icon-bar {
+    background-color: #fff;
+}
+.mynav-inverse .mynav-collapse,
+.mynav-inverse .mynav-form {
+    border-color: #101010;
+}
+.mynav-inverse .mynav-nav > .open > a,
+.mynav-inverse .mynav-nav > .open > a:hover,
+.mynav-inverse .mynav-nav > .open > a:focus {
+    color: #fff;
+    background-color: #080808;
+}
+.mynav-inverse .mynav-link {
+    color: #9d9d9d;
+}
+.mynav-inverse .mynav-link:hover {
+    color: #fff;
+}
+.mynav-inverse .btn-link {
+    color: #9d9d9d;
+}
+.mynav-inverse .btn-link:hover,
+.mynav-inverse .btn-link:focus {
+    color: #fff;
+}
+.mynav-inverse .btn-link[disabled]:hover,
+fieldset[disabled] .mynav-inverse .btn-link:hover,
+.mynav-inverse .btn-link[disabled]:focus,
+fieldset[disabled] .mynav-inverse .btn-link:focus {
+    color: #444;
+}
+
+/*主页*/
+.my-home{
+    width: 100%;
+    height: 712px;
+    background-image:url("../images/home-bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:background-image 1s ease-in-out;
+    color:#666666;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 180px;
+}
+.my-home .my-home-logo{
+    font-size:64px;
+    color:#7EE383;
+    font-weight:bold;
+}
+.my-home .my-home-header{
+    font-size: 48px;
+    margin-top:40px;
+}
+.my-home  .hidden-box{
+    /*background: palegoldenrod;*/
+    /*overflow: hidden;*/
+}
+.my-home  .work-text{
+    /*margin-top:-80px;*/
+}
+.my-home .more-arrow{
+    width:60px;
+    height:60px;
+    margin: 0 auto;
+}
+.my-home .more{
+    display: block;
+    width:60px;
+    height:60px;
+    margin-top:60px;
+    background:url("../images/arrow.png") no-repeat center center;
+    background-size:60px 60px;
+    padding:0 ;
+    text-align: center;
+}
+.animate-arrow{
+    width:35px;
+    height:35px;
+    background:url("../images/animate-arrow.png") no-repeat center center;
+    background-size:35px 35px;
+    margin:0 auto;
+    margin-top: 20px;
+    animation:move 2s linear infinite ;
+}
+@keyframes move{
+    0%{
+        margin-top: 20px;
+    }50%{
+         margin-top:25px;
+     }100%{
+          margin-top:30px;
+      }
+}
+
+.intro-con{
+    width: 100%;
+    background:#F5F8F5 ;
+}
+.intro-con .intro-con-1,
+.intro-con .intro-con-2,
+.intro-con .intro-con-3{
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.4);
+    background:#F5F8F5;
+    margin-top: -40px;
+    margin-bottom:10px;
+    height:206px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.intro-con .intro-con-1{
+    border-left:4px solid #7EE383;
+}
+.intro-con .intro-con-1,
+.intro-con .intro-con-2{
+    border-right:1px solid #7EE383;
+}
+.intro-con .intro-con-1:hover{background: #9C9;cursor: pointer}
+.intro-con .intro-con-2:hover{background: #89c;cursor: pointer}
+.intro-con .intro-con-3:hover{background: #CC9;cursor: pointer}
+.intro-con .intro-icon-left{
+    display: block;
+    width:80px;
+    height:80px;
+    border:2px solid #7EE383;
+    border-radius:50%;
+    background:url("../images/intro-icon-left1.png") no-repeat center center ;
+    background-color:#F5F8F5;
+    margin-right:10px;
+    background-size:50px 50px ;
+}
+.intro-con .intro-icon-left2{
+    background:url("../images/intro-icon-left2.png") no-repeat center center ;
+    background-size:50px 50px ;
+}
+.intro-con .intro-icon-left3{
+    background:url("../images/intro-icon-left3.png") no-repeat center center ;
+    background-size:50px 50px ;
+}
+.intro-con .icon-middle{
+    margin-top:64px;
+}
+.intro-con .intro-info .intro-title{
+    font-size:24px;
+    color:#000 ;
+}
+.intro-con .intro-info>p{
+    margin-top: 10px;
+    font-size:16px;
+}
+@media (max-width:767px){
+    .intro-con .icon-middle{
+        padding-top:64px;
+    }
+}
+@media (max-width:523px){
+    .intro-con .icon-middle{
+        padding-top:64px;
+    }
+}
+/*关于我*/
+#about{
+    background:#ddd;
+    padding:80px 0;
+}
+.about-title.center hr{
+    width: 70px;
+    height: 4px;
+    background: #7EE383;
+    border-top: none;
+}
+.about .my-photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url("../images/me.jpg") no-repeat;
+    margin:0 auto;
+    margin-top:60px;
+}
+.about .about-con{
+    width:60%;
+    margin:0 auto;
+}
+.about .about-con>p{
+    font-size: 22px;
+    margin-top: 20px;
+}
+.download{
+    width:150px;
+    height: 40px;
+    margin:30px auto;
+
+}
+.download .download-btn{
+    width:150px;
+    height: 40px;
+    border-radius:5px;
+    line-height:30px;
+    text-align: center;
+    font-size: 18px;
+    background: #33475F;
+    color: #fff;
+    padding-top: -10px;
+}
+/*作品*/
+
+#opus{
+    background:#F5F8F5;
+    padding:80px 0;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav > li {
+    position: relative;
+    display: block;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.nav > li.disabled > a {
+    color: #777;
+}
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+    color: #777;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    border-color: #337ab7;
+}
+.nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+.nav > li > a > img {
+    max-width: none;
+}
+.mynav-tabs {
+    width: 500px;
+    margin: 0 auto;
+}
+.mynav-tabs > li {
+    float: left;
+}
+.mynav-tabs > li > a {
+    margin-right:40px;
+    line-height: 1.42857143;
+    font-size: 16px;
+}
+.mynav-tabs > li > a:hover {
+    border-color: #eee #eee #ddd;
+    background:#F5F8F5;
+}
+.mynav-tabs > li.active > a,
+.mynav-tabs > li.active > a:hover,
+.mynav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    border-bottom:2px solid #7EE383;
+    background:#F5F8F5;
+}
+.mynav-tabs.nav-justified {
+    width: 100%;
+    border-bottom:0;
+}
+.mynav-tabs.nav-justified > li {
+    float: none;
+}
+.mynav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align:center;
+}
+.mynav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .mynav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .mynav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.mynav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.mynav-tabs.nav-justified > .active > a,
+.mynav-tabs.nav-justified > .active > a:hover,
+.mynav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .mynav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .mynav-tabs.nav-justified >.active > a,
+    .mynav-tabs.nav-justified >.active > a:hover,
+    .mynav-tabs.nav-justified >.active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+
+.mytab-content > .tab-pane {
+    display: none;
+}
+.mytab-content > .active {
+    display: block;
+}
+.tab-items .tab-item{
+    /*background:#7EE383 ;*/
+    height: 230px;
+    float: left;
+    margin-top: 30px;
+    border-right:20px solid #F5F8F5;
+    border-left:20px solid #F5F8F5;
+    cursor: pointer;
+    background:url("../images/opus-computer1.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.tab-items .tab-item-pcbg1{
+    background:url("../images/opus-computer2.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tab-items .tab-item-pcbg2{
+    background:url("../images/opus-computer3.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tab-items .tab-item-pcbg3{
+    background:url("../images/opus-computer4.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tab-items .tab-item-mobilebg1{
+    background:url("../images/opus-mobile1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tab-items .tab-item-mobilebg2{
+    background:url("../images/opus-mobile2.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tab-items .tab-item-mobilebg3{
+    background:url("../images/opus-mobile3.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tab-items .tab-item-appbg{
+    background:url("../images/opus-app.jpg") no-repeat center center;
+    background-size: cover;
+}
+/*个人经验*/
+#resume{
+    background: #F5F8F5;
+    padding: 80px 0;
+}
+
+
+.owl-points li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    border:2px solid #7ee383;
+    border-radius: 10px;
+
+}
+.owl-points .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color:#7ee383;
+}
+.olw-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:#616e7c;
+    text-align: center;
+    line-height:40px;
+    text-shadow:none;
+    font-size:20px;
+}
+.olw-caption>img{
+    margin-bottom: 20px;
+}
+.caption-text-title{
+    color:#337ab7;
+    font-size: 24px;
+}
+/*技能*/
+#skills{
+    background: #F5F8F5;
+    padding: 80px 0;
+}
+#skills .skill-text,
+#skills .about-skills{
+    margin-top:60px;
+}
+#skills .skill-text h2{
+    margin-bottom: 10px;
+}
+#skills .skill-text p{
+    line-height:30px;
+}
+.skill-text p i{
+    color:#7EE383;
+}
+#skills .tm-about-header{
+    text-align: center;
+    line-height: 30px;
+}
+.my-progress {
+    height:10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.my-progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color:#7EE383;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+/*联系我*/
+#contact{
+    background: #ddd;
+    padding: 80px 0;
+    /*height:600px;*/
+}
+#contact .contact-icon{
+    text-align: center;
+    font-size: 25px;
+}
+#contact .my-info{
+    text-align: center;
+    margin-top:20px;
+}
+#contact .my-info p{
+    font-size: 18px;
+}
