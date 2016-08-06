@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <!--Stylesheet-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href=""/>
+    <link rel="shortcut icon" href="myIcon.png"/>
+    <script>
+        var msg="钟燕仪-前端工程师-手机13018504217-邮箱13018504217@163.com";
+        var interval = 100;
+        var maxlen = 80;
+        var seq=maxlen;
+        var len
+        len = msg.length;
+        function Scroll() {
+            document.title=msg.substring(seq, len);
+            seq++;
+            if(seq >= len)
+            {
+                seq = 0;
+            }
+            window.setTimeout("Scroll();", interval );
+        }
+        Scroll();
+    </script>
+</head>
+<body>
+    <div class="mask">
+        <div class="mask-con">
+            <p class="animated tada">你是否想要下载我的简历呢？Yes or No?</p>
+            <div class="mask-btn">
+                <button type="button" class="btn btn-success yes"><a href="钟燕仪-前端开发工程师-13018504217.doc">是</a></button>
+                <button type="button" class="btn btn-success no">否</button>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div id="nav-container" class="fix-top">
+        <nav class="mynav mynav-default">
+            <div class="container-fluid nav-textcontainer">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="mynav-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="mynav-brand nav-brand" href="#" onclick="$('#about').animatescroll();">Resume</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav mynav-nav navbar-right">
+                        <li><a href="#" onclick="$('#about').animatescroll();">关于我</a></li>
+                        <li><a href="#" onclick="$('#opus').animatescroll();">个人发展</a></li>
+                        <li><a href="#" onclick="$('#resume').animatescroll();" >经验</a></li>
+                        <li><a href="#" onclick="$('#skills').animatescroll();">技能</a></li>
+                        <li><a href="#" onclick="$('#contact').animatescroll();">联系我</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!--header-->
+    <section  id="myhome" class="my-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 hidden-box">
+                    <h1 class="my-home-logo animated fadeInDown">Work</h1>
+                    <h1 class="my-home-header work-text animated fadeInUp">Web前端开发工程师</h1>
+                    <h1 class="my-home-header animated fadeInUp">关于我</h1>
+                    <div class="more-arrow" onclick="$('#about').animatescroll();"><a href="#about" class="more"></a></div>
+                    <div class="animate-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section >
+    <section id='intro' class="intro-con">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 intro-con-1">
+                    <div class="media icon-middle animated fadeInUp">
+                        <div class="media-left media-middle intro-icon">
+                            <a href="javascript:;" class="intro-icon-left"></a>
+                        </div>
+                        <div class="media-body intro-info">
+                            <h4 class="media-heading intro-title">我的资料</h4>
+                            <p>姓名：钟燕仪</p>
+                            <p>年龄：22岁</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 intro-con-2">
+                    <div class="media icon-middle animated fadeInUp">
+                        <div class="media-left media-middle intro-icon ">
+                            <a href="javascript:;" class="intro-icon-left intro-icon-left2"></a>
+                        </div>
+                        <div class="media-body intro-info">
+                            <h4 class="media-heading intro-title">教育程度</h4>
+                            <p>专业：计算机信息管理</p>
+                            <p>大专</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 intro-con-3">
+                    <div class="media icon-middle animated fadeInUp">
+                        <div class="media-left media-middle intro-icon">
+                            <a href="javascript:;" class="intro-icon-left intro-icon-left3"></a>
+                        </div>
+                        <div class="media-body intro-info">
+                            <h4 class="media-heading intro-title">求职意向</h4>
+                            <p>web前端工程师</p>
+                            <p>工作经验：一年半</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about-->
+    <section id="about" class="about">
+        <div class="contanier">
+            <div class="about-title center text-center">
+                <h2>ABOUT ME</h2>
+                <hr/>
+            </div>
+            <div class="my-photo"></div>
+            <div class="about-con">
+                <p>我个人非常热爱前端，大学的时候就开始关注前端这个行业，对前端的发展充满了信心。平常比较喜欢逛一些论坛、博客、社区，比如CSDN论坛，知乎社区，MDN，博客园等等，了解一些前端知识，实时关注前端的发展。我有良好的沟通能力和逻辑分析能力，熟悉使用sublime、webstorm等开发工具，能快速上手新技术。我有良好的团队协作能力，工作热情负责认真。</p>
+            </div>
+            <div class="download">
+                <a id="download" class="btn btn-default download-btn" href="#" role="button">
+                    <span  class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                    下载简历
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--opus-->
+    <section id="opus" class="clearfix">
+        <div class="container">
+            <div class="about-title center text-center">
+                <h2>MY PORTFOLIO</h2>
+                <hr/>
+            </div>
+            <div>
+                <ul class="nav mynav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">全部</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">pc端</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">移动端开发</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">移动App</a></li>
+                </ul>
+                <div class="mytab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="row tab-items">
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-pcbg1"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-pcbg2"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-pcbg3 "></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-mobilebg1"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-mobilebg2"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-mobilebg3"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-appbg"></div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="row tab-items">
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-pcbg1"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-pcbg2"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-pcbg3"></div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="row tab-items">
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-mobilebg1"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-mobilebg2"></div>
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-mobilebg3"></div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row tab-items">
+                            <div class="col-sm-6 col-md-3 col-lg-3 col-xs-12 tab-item tab-item-appbg"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section >
+    <!--resume-->
+    <section  id="resume">
+        <div class="container">
+            <div class="about-title center text-center">
+                <h2>EXPERIENCE</h2>
+                <hr/>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators owl-points">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/olw-bg.png" alt="...">
+                                <div class="carousel-caption olw-caption">
+                                    <img src="images/olw-item1.png" style="width:100px;height:100px" alt=""/>
+                                    <p class="caption-text-title">公司名字</p>
+                                    <p>一面网络技术 有限公司</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/olw-bg.png" alt="...">
+                                <div class="carousel-caption olw-caption">
+                                    <img src="images/olw-item2.png" style="width:100px;height:100px" alt=""/>
+                                    <p class="caption-text-title">工作岗位</p>
+                                    <p>web前端工程师</p>
+                                    <p>主要负责页面效果的实现，后期代码优化、迭代更新和与后台交互等工作</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/olw-bg.png" alt="...">
+                                <div class="carousel-caption olw-caption">
+                                    <img src="images/olw-item3.png" style="width:100px;height:100px" alt=""/>
+                                    <p class="caption-text-title">工作时间</p>
+                                    <p>2015/4-2016/7</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section >
+    <!--skills-->
+    <section  id="skills">
+        <div class="container">
+            <div class="about-title center text-center">
+                <h2>skill</h2>
+                <hr/>
+            </div>
+            <h2 class="tm-about-header">个人专业技能</h2>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 about-bottom-des wow bounceIn">
+                    <div class="col-md-6 col-sm-12 skill-text">
+                        <!--<h2 class="tm-about-header">个人专业技能</h2>-->
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;熟练掌握HTML/ HTML5、CSS/ CSS3等基本页面布局技术，能灵活运用到实际开发中，了解W3C标准。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;熟练掌握HTML/ HTML5、CSS/ CSS3等基本页面布局技术，能灵活运用到实际开发中，了解W3C标准。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;熟悉JavaScript开发技术，具备面向对象的编程思想，对原型、继承、闭包有较深的理解。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;熟练使用jQuery,熟悉jQuery的实现原理，了解jQuery插件机制。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;熟练使用Ajax与后台进行数据交互，能使用jsonp解决跨域问题。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;熟悉Bootstrap框架，能运用响应式开发和rem布局解决移动端的适配问题。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;了解AngularJS等流行框架，了解双向数据绑定、模块化等。</p>
+                        <p><i class="glyphicon glyphicon-ok"></i>&nbsp;会使用Git等代码管理工具。</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 about-skills">
+                        <strong>HTML5 &AMP; CSS3</strong>
+                        <span class="pull-right">95%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                        </div>
+                        <strong>Bootstrap</strong>
+                        <span class="pull-right">90%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                        </div>
+                        <strong>JQuery</strong>
+                        <span class="pull-right">90%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:90%;"></div>
+                        </div>
+                        <strong>Javascript</strong>
+                        <span class="pull-right">90%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:90%;"></div>
+                        </div>
+                        <strong>Ajax</strong>
+                        <span class="pull-right">80%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:80%;"></div>
+                        </div>
+                        <strong>AngularJS</strong>
+                        <span class="pull-right">50%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                        </div>
+                        <strong>Zpeto</strong>
+                        <span class="pull-right">75%</span>
+                        <div class="progress my-progress">
+                            <div class="progress-bar my-progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section >
+    <!--contact-->
+    <section  id="contact">
+        <div class="container">
+            <div class="about-title center text-center">
+                <h2>CONTACT ME</h2>
+                <hr/>
+                <p>感谢贵公司的阅读，您可以通过以下方式联系我！</p>
+            </div>
+            <div class="col-md-8 col-md-offset-2 my-info">
+                <div class="col-md-4">
+                    <i class="glyphicon glyphicon-map-marker contact-icon"></i>
+                    <p>广州</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="glyphicon glyphicon-envelope contact-icon"></i>
+                    <p>13018504217@163.com</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="glyphicon glyphicon-earphone contact-icon"></i>
+                    <p>+13018504217</p>
+                </div>
+            </div>
+        </div>
+    </section >
+    <!--footer-->
+    <section  id="footer"></section >
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/intro.js"></script>
+    <script type="text/javascript" src="js/animatescroll.js"></script>
+</body>
+</html>
